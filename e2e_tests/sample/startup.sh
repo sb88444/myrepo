@@ -4,6 +4,8 @@
 set -o xtrace
 SOURCE_DIR=$PWD
 
+cd $SOURCE_DIR
+pwd
 docker build -t e2e_test -f Dockerfile .
 
 echo "Executing Pytest"
