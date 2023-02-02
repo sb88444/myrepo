@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "ls"
-          command: ls"
+          command: "ls"
       - run:
           name: "permission"
           command: chmod 777 e2e_tests/startup.sh"
