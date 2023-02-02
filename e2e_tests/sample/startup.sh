@@ -7,8 +7,8 @@ SOURCE_DIR=$PWD
 cd $SOURCE_DIR
 pwd
 ls
-cat $SOURCE_DIR/e2e_tests/Dockerfile
-docker build -t e2e_test -f $SOURCE_DIR/e2e_tests/Dockerfile .
+
+docker build -t e2e_test -f $SOURCE_DIR/e2e_tests/sample/Dockerfile .
 
 echo "Executing Pytest"
 docker run --rm --entrypoint pytest --name test -v $SOURCE_DIR:/stms/qa \
