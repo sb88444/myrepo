@@ -4,7 +4,7 @@
 set -o xtrace
 SOURCE_DIR=$PWD
 
-docker build -t e2e_test -f BE-Dockerfile .
+docker build -t e2e_test -f Dockerfile .
 
 echo "Executing Pytest"
 docker run --rm --entrypoint pytest --name test -v $SOURCE_DIR:/stms/qa \
