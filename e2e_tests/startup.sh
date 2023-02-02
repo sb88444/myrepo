@@ -1,4 +1,3 @@
-#!/bin/bash
 
 # print command before executing
 set -o xtrace
@@ -12,6 +11,6 @@ docker build -t e2e_test -f $SOURCE_DIR/e2e_tests/sample/Dockerfile .
 
 echo "Executing Pytest"
 docker run --rm --entrypoint pytest --name test -v $SOURCE_DIR:/stms/qa \
-           --network host e2e_test:latest /stms/qa/
+           --network host e2e_test:latest /stms/qa/sample
 
 # DO NOT ADD CODE AFTER docker run COMMAND AS OUTPUT OF THIS COMMAND RETURNS EXIT CODE BASED ON WHICH JOB STATUS IS UPDATED.
