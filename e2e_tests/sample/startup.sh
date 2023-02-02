@@ -7,6 +7,7 @@ SOURCE_DIR=$PWD
 cd $SOURCE_DIR
 pwd
 ls
+cat $SOURCE_DIR/e2e_tests/Dockerfile
 docker build -t e2e_test -f $SOURCE_DIR/e2e_tests/Dockerfile .
 
 echo "Executing Pytest"
