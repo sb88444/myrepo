@@ -8,4 +8,4 @@ class TestSample():
 
 
     def test_sample(cls, caplog):
-        assert A == B
+        assert "A" == "B"
