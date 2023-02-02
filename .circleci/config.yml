@@ -18,10 +18,13 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
+        name: "ls"
+        command: "ls"
+      - run:
           name: "permission"
           command: "chmod 777 e2e_tests/sample/startup.sh"
       - run:
-          name: "ls"
+          name: "Running tests"
           command: "./e2e_tests/sample/startup.sh"
 
 # Invoke jobs via workflows
