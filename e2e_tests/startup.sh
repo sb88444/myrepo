@@ -6,8 +6,7 @@ SOURCE_DIR=$PWD
 cd $SOURCE_DIR
 pwd
 ls
-docker run --rm --entrypoint "/bin/bash" --name test -v $SOURCE_DIR:/stms/qa \
-           --network host ls
+docker run --rm --entrypoint "/bin/bash" --name test -v $SOURCE_DIR:/stms/qa --network host debian ls
 #docker build -t e2e_test -f $SOURCE_DIR/e2e_tests/Dockerfile .
 #
 #echo "Executing Pytest"
