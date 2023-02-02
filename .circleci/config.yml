@@ -9,8 +9,11 @@ jobs:
           name: "ls"
           command: "ls"
       - run:
+          name: "pwd"
+          command: "pwd"
+      - run:
           name: "permission"
           command: "chmod 777 e2e_tests/startup.sh"
       - run:
           name: "Running tests"
-          command: "docker run --rm --entrypoint=/bin/bash --name test -v $SOURCE_DIR/e2e_tests:/stms/qa sandeshb8/e2e_test:latest -c ls"
+          command: "docker run --rm --entrypoint=/bin/bash --name test -v ~/e2e_tests:/stms/qa sandeshb8/e2e_test:latest -c ls"
