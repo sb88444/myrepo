@@ -22,7 +22,7 @@ jobs:
           command: "chmod 777 e2e_tests/sample/startup.sh"
       - run:
           name: "Running tests"
-          command: "./e2e_tests/sample/startup.sh"
+          command: "/e2e_tests/startup.sh"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
