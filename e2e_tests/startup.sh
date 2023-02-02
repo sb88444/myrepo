@@ -15,8 +15,7 @@ docker run --rm --entrypoint=/bin/bash --name test -v $SOURCE_DIR/e2e_tests:/stm
 
 echo "again"
 docker run --rm --entrypoint=/bin/bash --name test -v $SOURCE_DIR/e2e_tests:/stms/qa sandeshb8/e2e_test:latest -c ls
-#echo "Executing Pytest"
-#docker run --rm --entrypoint pytest --name test -v $SOURCE_DIR:/stms/qa \
-#           --network host sandeshb8/e2e_test:latest /stms/qa/e2e_tests/sample
+echo "Executing Pytest"
+docker run --rm --entrypoint pytest --name test -v $SOURCE_DIR:/stms/qa --network host sandeshb8/e2e_test:latest /stms/qa/e2e_tests/sample
 
 # DO NOT ADD CODE AFTER docker run COMMAND AS OUTPUT OF THIS COMMAND RETURNS EXIT CODE BASED ON WHICH JOB STATUS IS UPDATED.
