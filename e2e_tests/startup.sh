@@ -6,6 +6,8 @@ SOURCE_DIR=$PWD
 cd $SOURCE_DIR
 pwd
 ls
+cd e2e_tests
+ls
 docker login -u sandeshb8 -p dckr_pat__3CqYNrraAqPWzTRRDxUUB9mZVQ docker.io
 #docker build -t sandeshb8/e2e_test -f $SOURCE_DIR/e2e_tests/Dockerfile .
 #docker push sandeshb8/e2e_test:latest
