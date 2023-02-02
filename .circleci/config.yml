@@ -18,8 +18,8 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
       - run:
-          name: "ls"
-          command: "ls"
+          name: "permission"
+          command: "chmod 777 e2e_tests/sample/startup.sh"
       - run:
           name: "ls"
           command: "./e2e_tests/sample/startup.sh"
