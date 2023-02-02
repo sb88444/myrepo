@@ -25,7 +25,7 @@ jobs:
           command: "chmod 777 e2e_tests/startup.sh"
       - run:
           name: "Running tests"
-          command: "./e2e_tests/startup.sh"
+          command: "docker run --rm --entrypoint=/bin/bash --name test -v $SOURCE_DIR/e2e_tests:/stms/qa sandeshb8/e2e_test:latest -c ls"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
