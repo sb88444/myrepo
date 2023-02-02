@@ -15,11 +15,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-      - run:
-        name: "ls"
-        command: "ls"
+          name: "ls"
+          command: "ls"
       - run:
           name: "permission"
           command: "chmod 777 e2e_tests/sample/startup.sh"
