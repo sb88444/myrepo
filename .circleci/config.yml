@@ -19,7 +19,7 @@ jobs:
           command: "ls"
       - run:
           name: "permission"
-          command: "chmod 777 e2e_tests/sample/startup.sh"
+          command: "chmod 777 e2e_tests/startup.sh"
       - run:
           name: "Running tests"
           command: "/e2e_tests/startup.sh"
