@@ -17,8 +17,12 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run:
+          name: "ls"
           command: "ls"
-          command: "pwd"
+      - run:
+          name: "ls"
+          command: "./e2e_tests/sample/startup.sh"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
