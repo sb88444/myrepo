@@ -6,6 +6,7 @@ SOURCE_DIR=$PWD
 docker login -u sandeshb8 -p dckr_pat__3CqYNrraAqPWzTRRDxUUB9mZVQ docker.io
 #docker build -t sandeshb8/e2e_test -f $SOURCE_DIR/e2e_tests/Dockerfile .
 #docker push sandeshb8/e2e_test:latest
+
 docker run --rm --entrypoint=/bin/bash --name test -v $SOURCE_DIR/e2e_tests:/stms/qa --network host sandeshb8/e2e_test:latest -c ls
 
 
